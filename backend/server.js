@@ -3,7 +3,7 @@ const app=express();
 require('dotenv').config();
 const path=require('path');
 const logger=require('morgan');
-
+const connection=require('./database');
 
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
