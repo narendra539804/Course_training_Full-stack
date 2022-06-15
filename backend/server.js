@@ -13,6 +13,12 @@ app.set("view engine","ejs");
 
 app.use(logger("dev"));
 
+//with in whole app we can use mysql
+app.use((req,res,next)=>{
+    req.connection=connection;
+    next();
+})
+
 app.get("/hi",(req,res)=>{
     res.send("hiii");
 })
