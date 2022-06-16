@@ -19,6 +19,8 @@ app.use((req,res,next)=>{
     next();
 })
 
+const routes=require('./routes/index');
+app.use('/api',routes.user);
 app.get("/hi",(req,res)=>{
     res.send("hiii");
 })
